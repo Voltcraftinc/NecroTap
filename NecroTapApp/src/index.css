@@ -1,0 +1,546 @@
+/* Basic resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+@font-face {
+  font-family: 'TheMacabre';
+  src: url('/assets/TheMacabre.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Body and general styling */
+body {
+  font-family: 'TheMacabre', sans-serif; /* Apply the custom font */
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+
+/* Lock the container to 1080x1920 for mobile-friendly design */
+.fixed-container {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Background styling */
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/background.png'); /* Fixed the URL */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Logo */
+.logo-container {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: auto;
+}
+
+.logo-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Central orb styling */
+.central-orb-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: auto;
+}
+
+.central-orb-container img {
+  width: 100%;
+  height: auto;
+}
+
+/* Mutabytes animation */
+.mutabytes-animation {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  animation: fly-to-mutabytes 1.5s ease-out forwards;
+}
+
+@keyframes fly-to-mutabytes {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-500px, -500px) scale(0.5); /* Adjust the target coordinates */
+    opacity: 0;
+  }
+}
+
+/* Mutabytes and Wraithium Shards Containers */
+.mutabytes-earn-container,
+.wraithium-earn-container {
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  width: 400px;
+}
+
+.wraithium-earn-container {
+  top: 25%;
+}
+
+.mutabytes-earn-container img,
+.wraithium-earn-container img {
+  width: 100%;
+}
+
+.mutabytes-text,
+.wraithium-text {
+  font-size: 50px;
+  position: absolute;
+  top: 40px;
+  left: 140px;
+}
+
+/* Mutabytes per hour container */
+.mutabytes-per-hour-container {
+  position: absolute;
+  right: 5%;
+  top: 18%;
+  width: 250px;
+}
+
+.mutabytes-per-hour-container img {
+  width: 100%;
+}
+
+.mutabytes-per-hour-text {
+  font-size: 32px;
+  position: absolute;
+  top: 20px; /* Adjust this value to move the text up/down */
+  left: 30px; /* Adjust this value to move the text left/right */
+}
+
+/* Mutabytes per tap container */
+.mutabytes-per-tap-container {
+  position: absolute;
+  right: 5%;
+  top: 22%; /* Adjust this value to move the container up/down */
+  width: 250px;
+}
+
+.mutabytes-per-tap-container img {
+  width: 100%;
+}
+
+.mutabytes-per-tap-text {
+  font-size: 32px;
+  position: absolute;
+  top: 40px; /* Adjust this value to move the text up/down */
+  left: 30px; /* Adjust this value to move the text left/right */
+}
+
+/* Convert Shards */
+.convert-shards-container {
+  position: absolute;
+  top: 27%;
+  left: 84%;
+  transform: translateX(-50%);
+  width: 250px;
+}
+
+.convert-shards-container img {
+  width: 100%;
+}
+
+/* Shards Per Hour */
+.shards-per-hour-text {
+  font-size: 32px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: rgb(0, 0, 0); /* Ensure the text is visible on the dark background */
+}
+
+.convert-shards-container img {
+  width: 100%;
+}
+
+/* HP Bar */
+.hp-bar {
+  position: absolute;
+  bottom: 16%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: auto;
+}
+
+.hp-bar img {
+  width: 100%;
+  height: auto;
+}
+
+.hp-text {
+  position: absolute;
+  top: 30px;
+  left: 55%;
+  transform: translateX(-50%);
+  font-size: 120px;
+}
+
+/* Left-side icons: Boost, Invite, Leaderboard, Settings */
+.left-icons-container {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.left-icon {
+  width: 120px;
+  height: auto;
+}
+
+.left-icon img {
+  width: 100%;
+  height: auto;
+}
+
+/* Icon buttons at the bottom */
+.icons-container {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 200px;
+  height: auto;
+}
+
+.icon img {
+  width: 100%;
+  height: auto;
+}
+
+/* Boost box styling */
+.boost-box {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000; /* Make sure it appears above other elements */
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+.boost-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.boost-header button {
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.boost-header button:hover {
+  background-color: darkred;
+}
+
+.boost-content {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.boost-content h3 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.boost-content button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-size: 26px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.boost-content button:hover {
+  background-color: #45a049;
+}
+
+/* Overlay box styling */
+/* Ensure the overlay box doesn't prevent scrolling */
+.overlay-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  max-width: 1080px;
+  max-height: 1320px;
+  background-image: url('/assets/overlaybox.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  border-radius: 0px;
+  padding: 0;
+  z-index: 1000;
+  box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.5);
+  overflow: visible; /* Changed from 'hidden' to 'visible' */
+}
+
+/* Close button styling for the overlay */
+.close-overlay-button {
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 20px; /* Adjust size for better visibility */
+  cursor: pointer;
+  padding: 10px 15px; /* Padding for box-like appearance */
+  border-radius: 5px;
+  font-weight: bold; /* Make the 'X' bold */
+  text-align: center;
+}
+
+.close-overlay-button:hover {
+  background-color: darkred; /* Darken on hover */
+}
+
+/* Ensure scrollable content inside the overlay */
+.overlay-scroll {
+  max-height: 60vh; /* Set a proper height limit */
+  overflow-y: auto; /* Enable vertical scroll */
+  padding-right: 15px;
+}
+
+/* Scrollbar styling */
+.overlay-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.overlay-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.overlay-scroll::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+  border-radius: 10px;
+}
+
+.overlay-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #45a049;
+}
+
+/* Inside box for assets */
+.inside-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: normal; /* Space evenly around the items */
+  gap: 10px;
+  margin: 100px 0;
+  width: 100%;
+  position: relative;
+  top: -20px;
+  left: 50px;
+}
+
+/* Each trinket item box */
+.trinket-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid white; /* White outline for the trinket box */
+  border-radius: 10px;
+  width: 45%; /* Adjust width to make two items fit side by side */
+  background-color: rgba(0, 0, 0, 0.7); /* Optional: Add background color */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Image inside the trinket-item */
+.trinket-image {
+  width: 120px; /* Adjust size */
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Trinket Information Styling */
+.trinket-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left; /* Align text to the left */
+  color: white;
+  font-family: 'TheMacabre', sans-serif;
+}
+
+/* Trinket Name Styling */
+.trinket-info .name {
+  font-size: 35px; /* Adjust size */
+  font-weight: bold;
+  text-shadow: 5px 5px 0px black, -2px -2px 0px black, 2px -2px 0px black, -2px 2px 0px black;
+  margin-bottom: 10px;
+}
+
+/* Trinket Level Styling */
+.trinket-info .level {
+  font-size: 25px; /* Adjust size */
+  color: #fff7a0;
+  margin-bottom: 10px;
+}
+
+/* Trinket Description Styling */
+.trinket-info .description {
+  font-size: 20px; /* Adjust size */
+  margin-bottom: 15px;
+  text-shadow: 3px 3px 0px black; /* Optional: Adjust shadow for description */
+}
+
+/* Purchase Button Styling */
+.purchase-button {
+  background-color: #4caf50;
+  color: #ff0000;
+  border: none;
+  font-size: 22px; /* Adjust size */
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-shadow: none;
+}
+
+.purchase-button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1080px) {
+  .trinket-item {
+    width: 90%; /* Make boxes narrower for smaller screens */
+    flex-direction: column; /* Stack image and text for smaller screens */
+    align-items: center;
+    text-align: center; /* Center text for smaller screens */
+  }
+
+  .trinket-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .trinket-info .name {
+    font-size: 30px; /* Smaller font for smaller screens */
+  }
+
+  .trinket-info .level,
+  .trinket-info .description {
+    font-size: 20px; /* Adjust for smaller screens */
+  }
+
+  .purchase-button {
+    font-size: 20px; /* Smaller button font size */
+  }
+}
+
+
+/* Parent grid container for Phants items */
+.phant-grid {
+  display: flex;
+  flex-wrap: wrap; /* Ensures items wrap onto the next line */
+  justify-content: space-between; /* Adds spacing between items */
+  gap: 20px; /* Adjust the space between items */
+}
+
+/* Phant item styling */
+.phant-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 45%; /* Makes two items fit side by side */
+  background-color: rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+/* Image inside the Phant item */
+.phant-image {
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Phant information styling */
+.phant-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  text-align: left;
+  font-family: 'TheMacabre', sans-serif;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1080px) {
+  .phant-item {
+    width: 90%; /* Adjust width for smaller screens */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .phant-image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
